@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MayWeather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body">
+    <div class="top">
+      <div class="nav">
+        <h1>MayWeather</h1>
+        <ul class="links">
+          <li onclick="loading()"><a href="#">Rhode Island</a></li>
+          <li onclick="loading()"><a href="#">New York</a></li>
+          <li onclick="loading()"><a href="#">Boston</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="subtitle-line">
+        <h2>Kwara</h2>
+        <form>
+          <label>Show temperature in </label>
+          <select name="temperature-scale" onchange="convert(this)">
+            <option>°F</option>
+            <option>°C</option>
+          </select>
+        </form>
+      </div>
+      <div class="row">
+        <div class="forecast">
+          <h1>Today</h1>
+          <img src="./dojo_weather/imgs/noun-rain.png" alt="rain" />
+          <p>some rain</p>
+          <p class="temperatures">
+            <span class="high" id="temp1">97</span>
+            <span class="low" id="temp2">78</span>
+          </p>
+        </div>
+        <div class="forecast">
+          <h1>Tomorrow</h1>
+          <img src="./dojo_weather/imgs/noun-sun.png" alt="sun" />
+          <p>some sun</p>
+          <p class="temperatures">
+            <span class="high" id="temp3">98</span>
+            <span class="low" id="temp4">77</span>
+          </p>
+        </div>
+        <div class="forecast">
+          <h1>Friday</h1>
+          <img src="./dojo_weather/imgs/noun-clouds.png" alt="clouds" />
+          <p>some cloud</p>
+          <p class="temperatures">
+            <span class="high" id="temp5">99</span>
+            <span class="low" id="temp6">78</span>
+          </p>
+        </div>
+        <div class="forecast">
+          <h1>Saturday</h1>
+          <img src="./dojo_weather/imgs/noun-suns.png" alt="sun" />
+          <p>some sun</p>
+          <p class="temperatures">
+            <span class="high" id="temp7">97</span>
+            <span class="low" id="temp8">77</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="cookie-policy">
+        <img src="./dojo_weather/imgs/cookie.png" alt="cookie" />
+        <div class="text">
+          <h2>Daily Summary</h2>
+          <p>
+            Today, the visibility will be perfectly clear, at 12 to 13 mi.<a
+              href="#"
+              >Read more...</a
+            >
+          </p>
+        </div>
+        <button class="btn" onclick="accept()">Accept</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
